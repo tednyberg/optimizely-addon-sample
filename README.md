@@ -10,8 +10,8 @@ The website project was set up using the **Optimizely CMS empty** Visual Studio 
 # Get started
 1. Clone project
 1. Create empty database and update `appsettings.json` (or run `create-db.bat` in the solution folder if you're using **LocalDB**)
-1. Start **Website** project and browse to https://localhost:5000/ which will prompt you to create an admin user
-1. Access the Optimizely UI through: https://localhost:5000/episerver/cms using the credentials of the admin user
+1. Start **Website** project and browse to https://localhost:44300/ which will prompt you to create an admin user
+1. Access the Optimizely UI through: https://localhost:44300/episerver/cms using the credentials of the admin user
 1. Create a new page of type `SamplePageType`
 1. Notice how the `SomeString` property has a wider textbox for editing
 
