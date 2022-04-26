@@ -13,12 +13,12 @@ namespace Addon
         {
             base.ModifyMetadata(metadata, attributes);
 
-            metadata.ClientEditingClass = "addon/CustomTextbox";
-
             var customTextboxAttribute = attributes.OfType<CustomTextBoxAttribute>().FirstOrDefault();
 
             if (customTextboxAttribute != null)
             {
+                metadata.ClientEditingClass = "addon/CustomTextbox";
+
                 metadata.EditorConfiguration.Add("width", customTextboxAttribute.Width);
             }
         }
