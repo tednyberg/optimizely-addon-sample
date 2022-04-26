@@ -1,0 +1,1 @@
+dotnet-episerver create-cms-database "Website\Website.csproj" -S "(LocalDb)\MSSQLLocalDB" -E -dn "AddonSample" -du "AddonSampleUser" -dp "Qwerty123!"

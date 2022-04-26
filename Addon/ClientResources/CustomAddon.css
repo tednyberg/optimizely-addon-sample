@@ -1,0 +1,11 @@
+﻿.Sleek .dijitTextBox .dijitInputInner.custom-textbox {
+    width: 100% !important;
+}
+
+.epi-pn-navigation.mdc-top-app-bar .epi-pn-navigation-row__primary {
+    background-color: orange !important;
+}
+
+.epi-pn-navigation .epi-pn-logo-background {
+    background-color: darkorange !important;
+}
