@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EPiServer.CMS.UI.Core" Version="12.5.0" />
+    <PackageReference Include="EPiServer.CMS" Version="12.10.0" />
   </ItemGroup>
 
 </Project>

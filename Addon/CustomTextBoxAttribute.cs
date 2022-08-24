@@ -13,9 +13,18 @@ namespace Addon
         }
 
         /// <summary>
-        /// Gets or sets width of textbox in pixels.
+        /// Gets or sets custom styling to apply to the textbox, i.e. the input DOM element, expressed as inline CSS.
         /// </summary>
-        /// <remarks>Defaults to 240 pixels.</remarks>
-        public int Width { get; set; } = 360;
+        public string? Style { get; set; }
+
+        /// <summary>
+        /// Gets or sets a CSS class to add to the editor widget wrapper.
+        /// </summary>
+        public string? CssClass { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of textbox to display.
+        /// </summary>
+        public TextBoxType Type { get; set; } = TextBoxType.Text;
     }
 }

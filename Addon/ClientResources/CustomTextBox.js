@@ -1,25 +1,39 @@
 ﻿define([
     "dojo/_base/declare",
+    "dojo/dom-attr",
     "dojo/dom-class",
-    "dojo/dom-style",
     "dijit/form/TextBox"
 ],
     function (
         declare,
+        domAttr,
         domClass,
-        domStyle,
         TextBox
     ) {
         return declare([TextBox], {
 
-            width: null, // See CustomTextBoxEditorDescriptor.cs
+            /* These properties will be picked up from the EditorConfiguration in CustomTextBoxEditorDescriptor.cs
+             * and will automatically be added as-is by Optimizely to the wrapper DOM element of the editor widget. */
+
+            style: null,
+
+            type: null,
+
+            cssClass: null,
 
             postCreate: function () {
                 this.inherited(arguments);
 
-                domClass.add(this.textbox, "custom-textbox"); // See CustomAddon.css
+                console.log("this", this);
 
-                domStyle.set(this.domNode, "width", `${this.width}px`); // Apply width to textbox wrapper element
+                if (this.cssClass) {
+                    // Add CSS class to the wrapper element of the editor widget, for example to apply custom styling through /ClientResources/CustomAddon.css
+                    domClass.add(this.domNode, this.cssClass);
+                }
+
+                // Apply custom inline styling directly to the textbox DOM element instead of to its wrapper element
+                domAttr.set(this.textbox, "style", this.style);
+                domAttr.remove(this.domNode, "style");
             }
 
         });

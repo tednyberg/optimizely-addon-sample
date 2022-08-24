@@ -1,6 +1,4 @@
-﻿.Sleek .dijitTextBox .dijitInputInner.custom-textbox {
-    width: 100% !important;
-}
+﻿/* Change colors of top menu bar */
 
 .epi-pn-navigation.mdc-top-app-bar .epi-pn-navigation-row__primary {
     background-color: orange !important;
@@ -8,4 +6,16 @@
 
 .epi-pn-navigation .epi-pn-logo-background {
     background-color: darkorange !important;
+}
+
+/* Resize editor widget wrapper according to the width of the textbox */
+
+.custom-textbox--autowidth {
+    
+    width: auto !important;
+    min-width: unset !important;
+}
+
+.dijitTextBox .dijitInputInner:invalid {
+    color: red;
 }

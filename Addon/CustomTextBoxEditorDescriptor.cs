@@ -19,7 +19,11 @@ namespace Addon
             {
                 metadata.ClientEditingClass = "addon/CustomTextbox";
 
-                metadata.EditorConfiguration.Add("width", customTextboxAttribute.Width);
+                metadata.EditorConfiguration.Add("cssClass", customTextboxAttribute.CssClass ?? "");
+
+                metadata.EditorConfiguration.Add("type", customTextboxAttribute.Type.ToString().ToLower());
+
+                metadata.EditorConfiguration.Add("style", customTextboxAttribute.Style ?? "");
             }
         }
     }
