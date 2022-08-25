@@ -20,6 +20,7 @@ namespace Addon
         /// <summary>
         /// Gets or sets a CSS class to add to the editor widget wrapper.
         /// </summary>
+        /// <remarks>We add a custom stylesheet for edit mode through module.config, so any class name specified for this property could be declared in /ClientResources/CustomAddon.css</remarks>
         public string? CssClass { get; set; }
 
         /// <summary>

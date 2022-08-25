@@ -24,8 +24,6 @@
             postCreate: function () {
                 this.inherited(arguments);
 
-                console.log("this", this);
-
                 if (this.cssClass) {
                     // Add CSS class to the wrapper element of the editor widget, for example to apply custom styling through /ClientResources/CustomAddon.css
                     domClass.add(this.domNode, this.cssClass);
