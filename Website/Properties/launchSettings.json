@@ -4,7 +4,7 @@
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44300/",
-      "launchUrl": "episerver/cms",
+      "launchUrl": "",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
