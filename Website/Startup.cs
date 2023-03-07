@@ -1,14 +1,10 @@
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
-using EPiServer.Scheduler;
-using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.IO;
 
 namespace Website
 {
@@ -23,13 +19,6 @@ namespace Website
 
         public void ConfigureServices(IServiceCollection services)
         {
-            if (_webHostingEnvironment.IsDevelopment())
-            {
-                AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(_webHostingEnvironment.ContentRootPath, "App_Data"));
-
-                services.Configure<SchedulerOptions>(options => options.Enabled = false);
-            }
-
             services
                 .AddCmsAspNetIdentity<ApplicationUser>()
                 .AddCms()
