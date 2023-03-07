@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace Website
@@ -10,6 +11,7 @@ namespace Website
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureCmsDefaults()
+                .ConfigureAppConfiguration(webBuilder => webBuilder.AddJsonFile("appSettings.user.json", optional: true))
                 .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
     }
 }
